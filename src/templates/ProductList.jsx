@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@mui/styles";
-import { createTheme } from "@mui/system";
+import { theme } from "../assets/theme";
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
@@ -11,7 +11,6 @@ const ProductList = () => {
   const dispatch = useDispatch();
   const selector = useSelector((state) => state);
   const products = getProducts(selector);
-  const theme = createTheme();
 
   useEffect(() => {
     dispatch(fetchProducts());
